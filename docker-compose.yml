@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  gdal:
+    image: osgeo/gdal
+    container_name: gdal
+    restart: unless-stopped
+    volumes:
+      - $PWD/mbtiles:/root/mbtiles
+    entrypoint: tail -f /dev/null
+    logging:
+      options:
+        max-size: 10m
