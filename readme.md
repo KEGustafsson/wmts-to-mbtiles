@@ -20,7 +20,7 @@ Usage: wmts-to-mbtiles [options]
 
 Defaults:
 ```
-url: https://julkinen.liikennevirasto.fi/rasteripalvelu/service/wmts
+url: https://julkinen.vayla.fi/rasteripalvelu/service/wmts
 layer: liikennevirasto:Rannikkokartat public
 zoom: 10
 ```
