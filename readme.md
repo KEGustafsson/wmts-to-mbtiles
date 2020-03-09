@@ -27,7 +27,7 @@ zoom: 10
 
 ### Example
 
-Fetch default layer from `liikennevirasto.fi` and output `test.mbtiles`:
+Fetch default layer from `julkinen.vayla.fi` and output `test.mbtiles`:
 
     wmts-to-mbtiles --output test.mbtiles
 
