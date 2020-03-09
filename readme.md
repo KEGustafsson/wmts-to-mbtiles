@@ -59,13 +59,13 @@ Run `mbview`:
 
 ## Generate zoom levels
 
-1. Install [GDAL](http://www.gdal.org/) Complete (> 2.1)
- - For Mac: http://www.kyngchaos.com/software/frameworks
- - `echo 'export PATH=/Library/Frameworks/GDAL.framework/Programs:$PATH' >> ~/.bash_profile`
+1. Install [GDAL](http://www.gdal.org/)
+ - Use docker-compose.yml to get GDAL
+ - mbtiles-folder bind to docker
 
 2. Use [gdaladdo](http://www.gdal.org/gdaladdo.html) to generate zoom levels for existing mbtiles file:
     
-    gdaladdo -r cubic test.mbtiles 2 4 8 16 32
+    gdaladdo -r cubic test.mbtiles 2 4 8 16 32 64 128
 
 Use `cubic` sampling for better results.
 

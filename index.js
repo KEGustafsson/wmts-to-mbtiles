@@ -5,7 +5,7 @@ const Promise = require('bluebird')
 const WmtsToMbtiles = require('./src/wmts-to-mbtiles')
 const {getCapabilities} = require('./src/wmts-parser')
 
-const defaultWMTSUrl = 'https://julkinen.liikennevirasto.fi/rasteripalvelu/service/wmts'
+const defaultWMTSUrl = 'https://julkinen.vayla.fi/rasteripalvelu/service/wmts'
 const defaultLayer = 'liikennevirasto:Rannikkokartat public'
 const defaultZoom = 10
 

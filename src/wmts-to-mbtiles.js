@@ -7,7 +7,7 @@ const {HttpsAgent} = require('agentkeepalive')
 const {longitudeToTileColumn, latitudeToTileRow, tileColumnToLongitude, tileRowToLatitude} = require('./utils')
 const mbtilesDb = require('./mbtiles-db')
 
-const keepaliveAgent = new HttpsAgent({maxSockets: 50})
+const keepaliveAgent = new HttpsAgent({maxSockets: 2})
 
 module.exports = function({mbtilesFile, wmtsUrl, layer, zoom, bbox}) {
   const db = mbtilesDb(mbtilesFile)
@@ -32,6 +32,8 @@ module.exports = function({mbtilesFile, wmtsUrl, layer, zoom, bbox}) {
       return fetchRow(row, columns)
         .then(columns => {
           console.log(`Row ${i+1}/${rows.length} done`)
+          setTimeout(function() {
+          }, 1000);
           return columns
         })
         .then(db.insertTiles)
