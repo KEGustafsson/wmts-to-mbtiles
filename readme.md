@@ -20,14 +20,14 @@ Usage: wmts-to-mbtiles [options]
 
 Defaults:
 ```
-url: https://julkinen.vayla.fi/rasteripalvelu/service/wmts
+url: https://julkinen.traficom.fi/rasteripalvelu/wmts
 layer: liikennevirasto:Rannikkokartat public
 zoom: 10
 ```
 
 ### Example
 
-Fetch default layer from `julkinen.vayla.fi` and output `test.mbtiles`:
+Fetch default layer from `julkinen.traficom.fi` and output `test.mbtiles`:
 
     wmts-to-mbtiles --output test.mbtiles
 
